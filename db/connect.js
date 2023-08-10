@@ -5,7 +5,8 @@ const connectionString = 'mongodb+srv://om:jaymataji@cluster0.hwff1yi.mongodb.ne
 const connectDB = (url) => {
     return mongoose.connect(url, {
         useNewUrlParser: true,
-       
+        useCreateIndex: true,
+        useFindAndModify: false,
         useUnifiedTopology: true,
     })
 }
